@@ -1,0 +1,96 @@
+@import url("jb_mono.css");
+
+html {
+  background: #000;
+  color: #FFF;
+  font-family: "JetBrains Mono", Monospaced !important;
+}
+
+body {
+  background-image: linear-gradient(60deg, #000, #111)
+}
+
+a, button {
+  background-color: rgba(0,0,0,0%);
+  font-family: "JetBrains Mono", Monospaced !important;
+  color: #999;
+  transition: all 250ms ease-in-out;
+  text-decoration: none;
+}
+a:hover, button:hover {color: #CCC}
+
+.btn {
+  margin: 12px;
+  padding: 8px 24px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  transition: all 250ms ease-in-out;
+  font-size: 18px;
+  float:left;
+}
+.btn:hover {
+  background-color: #111;
+}
+
+@media screen and (max-width: 1300px) {
+  .dyn_btn {
+    margin: 12px;
+    padding: 8px 24px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    transition: all 250ms ease-in-out;
+    font-size: 18px;
+    float:left;
+  }
+  .dyn_btn:hover {
+    color: #CCC;
+    background-color: #111;
+  }
+}
+
+.btn_wrapper {
+  text-align: center;
+  max-width: fit-content;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+
+table, th, td {
+  border-bottom: #222 1px solid;
+  border-collapse: collapse;
+  padding: 15px;
+}
+
+body {
+  margin: 0px;
+  min-height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background-image: linear-gradient(60deg, #000, #111);
+  padding: 16px;
+  text-align: center;
+}
+
+td {
+  max-width: 500px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.req {
+  color: #f00;
+}
+
+.hid_list {
+  margin: 0;
+  padding: 0;
+}
+
+.hid_list-ns {
+  list-style: none;
+}

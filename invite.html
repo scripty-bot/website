@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scripty | Invite</title>
+
+  <link rel="preload" href="/assets/jb_mono/woff2/jb.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/jb_mono/woff2/jb_bold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/css/main.css" as="style" type="text/css">
+  <link rel="preload" href="/css/jb_mono.css" as="style" type="text/css">
+  <link rel="preload" href="https://sa.scripty.org/latest.js" as="script" type="application/javascript">
+
+  <meta name="description" content="Scripty is a easy-to-use speech-to-text bot for your Discord server. Check it out!">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<h1>Invite Scripty</h1>
+
+Scripty needs a few relatively basic permissions to function.<br>
+<div class="btn_wrapper"><button class="btn" onclick="togglePerms()" id="perm_sets_btn" style="cursor: pointer">Click here to show them</button><noscript>(note: this requires JS)</noscript></div>
+<div id="perm_sets" style="display: none">
+Note that any permissions in red <span class="req">like this</span> are required for Scripty to operate.
+<br><br>
+<table align="center">
+  <thead>
+  <tr><th>Permission</th><th>Reason</th></tr>
+  </thead>
+
+  <tr>
+    <td class="req">Change Nickname</td>
+    <td>
+      For planned features: see <a href="roadmap.html">our roadmap</a> for more info<br>
+      <b>NOTE</b>: Scripty will soon be unable to work without this permission!
+    </td>
+  </tr>
+  <tr>
+    <td class="req">Manage Webhooks</td>
+    <td>
+      Scripty uses webhooks to output the results of transcriptions,
+      in large part due to hooks having a lower ratelimit than normal messages.
+      This cannot be disabled.
+    </td>
+  </tr>
+  <tr>
+    <td class="req">Read Messages</td>
+    <td>... do i have to explain this one?</td>
+  </tr>
+  <tr>
+    <td class="req">Send Messages</td>
+    <td>okay if you need to know why stop here and close this tab</td>
+  </tr>
+  <tr>
+    <td>Create Public/Private Threads</td>
+    <td rowspan="3">For planned features: see <a href="roadmap.html">our roadmap</a> for more info</td>
+  </tr>
+  <tr>
+    <td>Send Messages in Threads</td>
+
+  </tr>
+  <tr>
+    <td>Manage Threads</td>
+
+  </tr>
+  <tr>
+    <td>Manage Messages</td>
+    <td>For planned features: see <a href="roadmap.html">our roadmap</a> for more info</td>
+  </tr>
+  <tr>
+    <td class="req">Embed Links</td>
+    <td>Scripty primarily communicates via embeds.</td>
+  </tr>
+  <tr>
+    <td>Attach Files</td>
+    <td>For planned features: see <a href="roadmap.html">our roadmap</a> for more info</td>
+  </tr>
+  <tr>
+    <td>Read Message History</td>
+    <td>
+      For planned feature (<b>OPTIONALLY</b> using your own messages
+      <b>IF YOU OPT IN</b> to improve speech-to-text accuracy)
+      For planned features: see <a href="roadmap.html">our roadmap</a> for more info
+    </td>
+  </tr>
+  <tr>
+    <td>Use External Emojis</td>
+    <td>Not currently needed, asked for in case a future feature needs it.</td>
+  </tr>
+  <tr>
+    <td>Add Reactions</td>
+    <td>Not currently needed, asked for in case a future feature needs it.</td>
+  </tr>
+  <tr>
+    <td class="req">Connect</td>
+    <td>The bot cannot transcript audio if it cannot connect to the VC a user is in.</td>
+  </tr>
+  <tr>
+    <td>Speak</td>
+    <td>For planned features: see <a href="roadmap.html">our roadmap</a> for more info</td>
+  </tr>
+
+  <tr>
+    <td>See your username and avatar</td>
+    <td>For planned features: see <a href="roadmap.html">our roadmap</a> for more info</td>
+  </tr>
+  <tr>
+    <td>See your linked accounts</td>
+    <td>For planned features: see <a href="roadmap.html">our roadmap</a> for more info</td>
+  </tr>
+</table>
+
+  If you're concerned with any of our data collection, please refer to our
+  <a href="privacy.html">privacy policy</a>.
+</div>
+
+<div class="btn_wrapper">
+  <a href="https://discord.com/api/oauth2/authorize
+?client_id=811652199100317726
+&permissions=395744504896
+&redirect_uri=https%3A%2F%2Fscripty.org%2Foauth%2Fcallback%2Fdiscord
+&response_type=code&scope=identify%20connections%20applications.commands%20bot&continue"
+     class="btn">Invite Scripty</a>
+</div>
+We recommend you complete all of this, which will return you back here to continue setup.
+
+<script>
+  const permSetTable = document.getElementById("perm_sets");
+  const permSetButton = document.getElementById("perm_sets_btn");
+  function togglePerms() {
+    if (permSetTable.style.display === "none") {
+      permSetTable.style.display = null;
+      permSetButton.innerText = "Click here to hide them";
+    } else {
+      permSetTable.style.display = "none";
+      permSetButton.innerText = "Click here to show them";
+    }
+  }
+</script>
+
+<!-- 100% privacy friendly analytics: https://simpleanalytics.com/scripty.org -->
+<script async defer src="https://sa.scripty.org/latest.js"></script>
+<noscript><img src="https://sa.scripty.org/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+</body>
+</html>
