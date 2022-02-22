@@ -10,7 +10,7 @@
   <link rel="preload" href="/css/main.css" as="style" type="text/css">
   <link rel="preload" href="/css/jb_mono.css" as="style" type="text/css">
   <link rel="preload" href="https://sa.scripty.org/latest.js" as="script" type="application/javascript">
-  <link rel="preload" href="/img/icon-256.webp" as="image" type="image/webp">
+  <link rel="preload" href="/img/icon-512.webp" as="image" type="image/webp">
 
   <meta name="description" content="Scripty is an easy-to-use speech-to-text bot for your Discord server. Check it out!">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,20 +25,15 @@
 
   <style>
     #body {
-      width: 40%;
       margin: auto;
-      padding-top: 1%;
       overflow: hidden;
     }
     #logo {
-      width: 50%;
       margin: auto;
-      float:left;
     }
-    #details {
+    #links {
       margin: auto;
-      float: left;
-      display:block;
+      display: block;
     }
 
     img {
@@ -49,33 +44,35 @@
       margin: auto;
     }
 
-    @media screen and (min-width: 1300px) {
-      #details {
+    @media screen and (min-width: 1000px) {
+      #body {
+        width: 40%;
         max-width: 50%;
       }
-      img {
-        width: 300px;
-        height: 300px;
+      #logo {
+        width: 50%;
+        height: 100%;
+        float:left;
       }
-      #body {
-        transform: translateY(33%);
+      .details_row_element {
+        float: left;
+        width: 33.3%;
+        padding-left: 4px;
+        padding-right: 4px;
       }
     }
 
-    @media screen and (max-width: 1300px) {
+    @media screen and (max-width: 1000px) {
       #links_wrapper, #btn_wrapper {
         font-size: 24px;
       }
-    }
-
-    #links_wrapper {
-      float:left;
-    }
-
-    html {
-      margin: 0px;
-      height: 100%;
-      text-align: center;
+      #logo {
+        height: 50vh;
+        aspect-ratio: 1;
+      }
+      .btn_bullet {
+        display: none
+      }
     }
 
     body {
@@ -88,25 +85,82 @@
 
 <body>
 <div id="body">
-  <div id="logo"><img src="img/icon-256.webp" alt="Scripty's Logo" width="256" height="256"></div>
+  <div id="intro">
+    <div id="logo"><img src="img/icon-512.webp" alt="Scripty's Logo" width="256" height="256"></div>
+    <h1>Scripty</h1>
+    <h2>The best speech-to-text Discord bot!</h2>
+
+    <p>
+      Have a hearing-impaired friend? Want to be able to moderate voice chats as easily as text chats?
+      No matter your reason, Scripty comes to the rescue! Set it up once and forget about it forever.
+      The bot will sit quietly and transcript all of your conversations without having to do anything else.
+      For free. Forever.
+    </p>
+  </div>
+  <div style="overflow:hidden;display: inline-block;">
+    <a href="invite.html" class="btn">Invite Now</a>
+  </div>
+
   <div id="details">
-    <div id="about">
-      <h1>Scripty</h1>
-      <p>
-        Simple, easy-to-use speech-to-text for Discord voice calls.
-      </p>
+    <h2>Why Scripty?</h2>
+
+    <div class="details_row">
+      <div class="details_row_element">
+        <h3>It's fast.</h3>
+        <p>
+          Scripty utilizes the latest technologies to increase its speed, allowing transcriptions to be produced in
+          just hundredths of a second.
+        </p>
+      </div>
+      <div class="details_row_element">
+        <h3>It's open source.</h3>
+        <p>
+          Every single part of Scripty is open source <a href="https://github.com/scripty-bot">on GitHub</a>, from the
+          core bot code itself to the speech-to-text algorithm.
+        </p>
+      </div>
+      <div class="details_row_element">
+        <h3>It's community run.</h3>
+        <p>
+          Hundreds of thousands of people, making up over 20,000 hours of audio, came together to make a public voice
+          dataset that is the backbone of Scripty.
+        </p>
+      </div>
     </div>
-    <br>
-    <div class="btn_wrapper">
+    <div class="details_row">
+      <div class="details_row_element">
+        <h3>It's easy to use.</h3>
+        <p>
+          Set it up with one single command, and then just ask it to join a voice chat. That's it. No bullshit.
+        </p>
+      </div>
+      <div class="details_row_element">
+        <h3>It's free.</h3>
+        <p>
+          Scripty's core features will always be free, forever.
+        </p>
+      </div>
+      <div class="details_row_element">
+        <h3>It's private.</h3>
+        <p>
+          Absolutely no logs are kept about your transcriptions or audio. What happens in your server, stays in your
+          server.
+        </p>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div id="links">
+    <div id="btn_wrapper">
       <a href="invite.html" class="btn">Invite</a>
       <a href="https://docs.scripty.org" class="btn">Docs</a>
       <a href="about.html" class="btn">About</a>
     </div>
-    <br>
     <div id="links_wrapper">
-      <a href="https://github.com/scripty-bot" class="dyn_btn">GitHub</a> •
-      <a href="https://discord.gg/VH35msCN38" class="dyn_btn">Discord</a> •
-      <a href="premium.html" class="dyn_btn">Premium</a> •
+      <a href="https://github.com/scripty-bot" class="dyn_btn">GitHub</a><span class="btn_bullet">&nbsp;•&nbsp;</span>
+      <a href="https://discord.gg/VH35msCN38" class="dyn_btn">Discord</a><span class="btn_bullet">&nbsp;•&nbsp;</span>
+      <a href="premium.html" class="dyn_btn">Premium</a><span class="btn_bullet">&nbsp;•&nbsp;</span>
       <a href="privacy.html" class="dyn_btn">Privacy Policy</a>
     </div>
   </div>
@@ -115,5 +169,5 @@
 <!-- 100% privacy friendly analytics: https://simpleanalytics.com/scripty.org -->
 <script async defer src="https://sa.scripty.org/latest.js"></script>
 <noscript><img src="https://sa.scripty.org/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
-</body>`
+</body>
 </html>

@@ -32,7 +32,7 @@ a:hover, button:hover {color: #CCC}
   background-color: #111;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1000px) {
   .dyn_btn {
     margin: 12px;
     padding: 8px 24px;
@@ -48,11 +48,14 @@ a:hover, button:hover {color: #CCC}
   }
 }
 
-.btn_wrapper {
+#btn_wrapper, #links_wrapper {
   text-align: center;
-  max-width: fit-content;
+  width: 100%;
   overflow: hidden;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
