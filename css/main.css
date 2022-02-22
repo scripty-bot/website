@@ -47,12 +47,12 @@ a:hover, button:hover {color: #CCC}
     background-color: #111;
   }
 
-  #btn_wrapper, #links_wrapper {
+  .btn_wrapper, #links_wrapper {
     font-size: 24px;
   }
 }
 
-#btn_wrapper, #links_wrapper {
+.btn_wrapper, #links_wrapper {
   text-align: center;
   width: 100%;
   overflow: hidden;
