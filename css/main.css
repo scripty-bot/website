@@ -46,6 +46,10 @@ a:hover, button:hover {color: #CCC}
     color: #CCC;
     background-color: #111;
   }
+
+  #btn_wrapper, #links_wrapper {
+    font-size: 24px;
+  }
 }
 
 #btn_wrapper, #links_wrapper {
@@ -96,4 +100,8 @@ td {
 
 .hid_list-ns {
   list-style: none;
+}
+
+footer {
+  padding-top: 12px;
 }
