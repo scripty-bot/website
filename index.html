@@ -24,21 +24,12 @@
   <link rel="stylesheet" href="/css/main.css">
 
   <style>
-    #body {
-      margin: auto;
-      overflow: hidden;
-    }
-
     img {
       width: 100%;
       height: 100%;
     }
 
     @media screen and (min-width: 1000px) {
-      #body {
-        width: 40%;
-        max-width: 50%;
-      }
       #logo {
         width: 50%;
         height: 100%;
@@ -58,15 +49,23 @@
         aspect-ratio: 1;
         margin: auto;
       }
-      .btn_bullet {
-        display: none
-      }
     }
   </style>
 </head>
 
 <body>
-<div id="body">
+<div class="body">
+  <header>
+    <div class="header_title">
+      Scripty
+    </div>
+    <div class="header_links">
+      <a href="index.html" class="dyn_btn">Home</a><span class="btn_bullet">&nbsp;•&nbsp;</span>
+      <a href="invite.html" class="dyn_btn">Invite</a><span class="btn_bullet">&nbsp;•&nbsp;</span>
+      <a href="about.html" class="dyn_btn">About</a>
+    </div>
+  </header>
+
   <div id="intro">
     <div id="logo"><img src="img/icon-512.webp" alt="Scripty's Logo" width="256" height="256"></div>
     <h1>Scripty</h1>
@@ -149,6 +148,7 @@
   </div>
 
   <footer>
+    <hr>
     made with <3 by 0/0 and valkyrie_pilot
   </footer>
 </div>

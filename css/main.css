@@ -54,6 +54,19 @@ a:hover, button:hover {color: #CCC}
   }
 
   .btn_wrapper, #links_wrapper {font-size: 24px}
+
+  .btn_bullet {display: none}
+}
+
+@media screen and (min-width: 1000px) {
+  .body {
+    width: 40%;
+    max-width: 50%;
+  }
+}
+.body {
+  margin: auto;
+  overflow: hidden;
 }
 
 .btn_wrapper, #links_wrapper {
@@ -82,3 +95,25 @@ td {max-width: 500px}
 .hid_list-ns {list-style: none}
 
 footer {padding-top: 12px}
+
+footer>hr {
+  height: 0px;
+  color: #555;
+  background: #555;
+  width: 85%;
+}
+
+header {
+  font-size: 24px;
+  overflow: hidden;
+  padding-bottom: 12px;
+}
+
+.header_title {
+  text-align: left; float: left
+}
+
+.header_links {
+  text-align: right; float: right
+}
+
