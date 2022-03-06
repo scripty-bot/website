@@ -10,6 +10,7 @@
   <link rel="preload" href="/css/jb_mono.css" as="style" type="text/css">
   <link rel="preload" href="https://sa.scripty.org/latest.js" as="script" type="application/javascript">
   <link rel="preload" href="/js/events.js" as="script" type="application/javascript">
+  <link rel="preload" href="/js/perms.js" as="script" type="application/javascript">
 
   <meta name="description" content="Scripty is a easy-to-use speech-to-text bot for your Discord server. Check it out!">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,7 +40,7 @@
 
   Scripty needs a few relatively basic permissions to function.<br>
   <div class="btn_wrapper">
-    <button class="btn" onclick="togglePerms()" id="perm_sets_btn" style="cursor: pointer">Click here to show them</button>
+    <button class="btn" id="perm_sets_btn" style="cursor: pointer">Click here to show them</button>
     <noscript>(note: this requires JS)</noscript>
   </div>
 
@@ -144,7 +145,7 @@
 &permissions=395744504896
 &redirect_uri=https%3A%2F%2Fscripty.org%2Foauth%2Fcallback%2Fdiscord
 &response_type=code&scope=identify%20connections%20applications.commands%20bot&continue"
-       class="btn" onclick="onInviteClicked()">Invite Scripty</a>
+       class="btn" onclick="onInviteClicked()" id="invite_btn">Invite Scripty</a>
   </div>
   We recommend you complete all of this, which will return you back here to continue setup.
 
@@ -154,23 +155,11 @@
   </footer>
 </div>
 
-<script>
-  const permSetTable = document.getElementById("perm_sets");
-  const permSetButton = document.getElementById("perm_sets_btn");
-  function togglePerms() {
-    if (permSetTable.style.display === "none") {
-      permSetTable.style.display = null;
-      permSetButton.innerText = "Click here to hide them";
-    } else {
-      permSetTable.style.display = "none";
-      permSetButton.innerText = "Click here to show them";
-    }
-  }
-</script>
-
 <!-- 100% privacy friendly analytics: https://simpleanalytics.com/scripty.org -->
 <script async defer src="https://sa.scripty.org/latest.js"></script>
 <script async defer src="/js/events.js"></script>
 <noscript><img src="https://sa.scripty.org/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+
+<script async defer src="/js/perms.js"></script>
 </body>
 </html>
