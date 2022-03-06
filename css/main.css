@@ -55,6 +55,8 @@ a:hover, button:hover {color: #CCC}
 
   .btn_wrapper, #links_wrapper {font-size: 24px}
 
+  #links_wrapper {display:inline-block !important}
+
   .btn_bullet {display: none}
 }
 
