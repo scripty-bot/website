@@ -9,6 +9,7 @@
   <link rel="preload" href="/css/main.css" as="style" type="text/css">
   <link rel="preload" href="/css/jb_mono.css" as="style" type="text/css">
   <link rel="preload" href="https://sa.scripty.org/latest.js" as="script" type="application/javascript">
+  <link rel="preload" href="/js/events.js" as="script" type="application/javascript">
 
   <meta name="description" content="Scripty is a easy-to-use speech-to-text bot for your Discord server. Check it out!">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -143,7 +144,7 @@
 &permissions=395744504896
 &redirect_uri=https%3A%2F%2Fscripty.org%2Foauth%2Fcallback%2Fdiscord
 &response_type=code&scope=identify%20connections%20applications.commands%20bot&continue"
-       class="btn">Invite Scripty</a>
+       class="btn" onclick="onInviteClicked()">Invite Scripty</a>
   </div>
   We recommend you complete all of this, which will return you back here to continue setup.
 
@@ -169,6 +170,7 @@
 
 <!-- 100% privacy friendly analytics: https://simpleanalytics.com/scripty.org -->
 <script async defer src="https://sa.scripty.org/latest.js"></script>
+<script async defer src="/js/events.js"></script>
 <noscript><img src="https://sa.scripty.org/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 </body>
 </html>
