@@ -9,7 +9,7 @@
   <link rel="preload" href="/css/main.css" as="style" type="text/css">
   <link rel="preload" href="/css/jb_mono.css" as="style" type="text/css">
   <link rel="preload" href="https://sa.scripty.org/latest.js" as="script" type="application/javascript">
-  <link rel="preload" href="/js/events.js" as="script" type="application/javascript">
+  <link rel="preload" href="/js/premium.js" as="script" type="application/javascript">
 
   <meta name="description" content="Scripty's premium plans">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -45,74 +45,14 @@
   In the future this process will be streamlined that way you just need to log in with Discord and a linked GitHub account.
 
   <h2>Plans</h2>
-  <table align="center">
+  <noscript>
+    Heads up: we use JS to dynamically inject the tier list that way it's easier for us to maintain.
+    It's very lightweight, so just enable JS here and you're good to go.
+  </noscript>
+  <table align="center" id="tier_list_table">
     <thead>
     <tr><th>Price in USD/month</th><th>Features</th><th></th></tr>
     </thead>
-
-    <tr>
-      <td>$5</td>
-      <td><ul>
-        <li>Up to 10 users in a voice chat, up from default of 5</li>
-        <li>Premium status can be applied to 1 server</li>
-      </ul></td>
-      <td>
-        <a href="https://github.com/sponsors/tazz4843/sponsorships?sponsor=tazz4843&tier_id=66453" class="btn" onclick="onSponsorClicked(5)">Subscribe</a>
-      </td>
-    </tr>
-
-    <tr>
-      <td>$10</td>
-      <td><ul>
-        <li>Up to 25 users in a voice chat</li>
-      </ul></td>
-      <td>
-        <a href="https://github.com/sponsors/tazz4843/sponsorships?sponsor=tazz4843&tier_id=54920" class="btn" onclick="onSponsorClicked(10)">Subscribe</a>
-      </td>
-    </tr>
-
-    <tr>
-      <td>$25</td>
-      <td><ul>
-        <li>Up to 50 users in a voice chat</li>
-        <li>Premium status can be applied to 3 servers</li>
-      </ul></td>
-      <td>
-        <a href="https://github.com/sponsors/tazz4843/sponsorships?sponsor=tazz4843&tier_id=54921" class="btn" onclick="onSponsorClicked(25)">Subscribe</a>
-      </td>
-    </tr>
-
-    <tr>
-      <td>$50</td>
-      <td><ul>
-        <li>Up to 75 users in a voice chat</li>
-      </ul></td>
-      <td>
-        <a href="https://github.com/sponsors/tazz4843/sponsorships?sponsor=tazz4843&tier_id=54923" class="btn" onclick="onSponsorClicked(50)">Subscribe</a>
-      </td>
-    </tr>
-
-    <tr>
-      <td>$75</td>
-      <td><ul>
-        <li>Up to 100 users in a voice chat</li>
-        <li>Premium status can be applied to 5 servers</li>
-      </ul></td>
-      <td>
-        <a href="https://github.com/sponsors/tazz4843/sponsorships?sponsor=tazz4843&tier_id=54925" class="btn" onclick="onSponsorClicked(75)">Subscribe</a>
-      </td>
-    </tr>
-
-    <tr>
-      <td>$100</td>
-      <td><ul>
-        <li>All from $75 plus;</li>
-        <li>Your own managed instance of Scripty</li>
-      </ul></td>
-      <td>
-        <a href="https://github.com/sponsors/tazz4843/sponsorships?sponsor=tazz4843&tier_id=54926" class="btn" onclick="onSponsorClicked(100)">Subscribe</a>
-      </td>
-    </tr>
   </table>
 
   <footer>
@@ -123,7 +63,8 @@
 
 <!-- 100% privacy friendly analytics: https://simpleanalytics.com/scripty.org -->
 <script async defer src="https://sa.scripty.org/latest.js"></script>
-<script async defer src="/js/events.js"></script>
 <noscript><img src="https://sa.scripty.org/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+
+<script async defer src="/js/premium.js"></script>
 </body>
 </html>
