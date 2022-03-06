@@ -7,19 +7,10 @@ window.sa_event = window.sa_event || function() {
 const dntActive = parseInt(navigator.msDoNotTrack || window.doNotTrack || navigator.doNotTrack, 10) === 1;
 
 function onInviteClicked() {
-  if (window.sa_event_loaded && !dntActive) {
-    sa_event("invite_clicked");
-  }
-}
+  if (!dntActive) sa_event("invite_clicked");
+};
 
-function onDiscordClicked() {
-  if (window.sa_event_loaded && !dntActive) {
-    sa_event("discord_clicked");
-  }
-}
-
-function onSponsorClicked(tier) {
-  if (window.sa_event_loaded && !dntActive) {
-    sa_event("sponsor_tier_clicked_" + tier);
-  }
-}
+const registerMaps = {
+  "invite_btn": onInviteClicked,
+};
+for (let id in registerMaps) if ((elm = document.getElementById(id)) !== null) elm.addEventListener("click", registerMaps[id]);
