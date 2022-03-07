@@ -61,15 +61,13 @@ function x() {
   for (const tier of tierDetails) {
     const tableRow = createElement("tr");
 
-    const price = tier["p"];
     const priceColumn = createElement(tableData);
-    priceColumn.innerHTML = `$${price}`;
+    priceColumn.innerHTML = `$${tier["p"]}`;
     appendChild(tableRow, priceColumn);
 
-    const features = tier["f"];
     const featuresColumn = createElement(tableData);
     const featuresList = createElement("ul");
-    for (const feature of features) {
+    for (const feature of tier["f"]) {
       const featureListElement = createElement("li");
       featureListElement.innerHTML = feature;
       appendChild(featuresList, featureListElement);
@@ -77,12 +75,11 @@ function x() {
     appendChild(featuresColumn, featuresList);
     appendChild(tableRow, featuresColumn);
 
-    const id = tier["id"];
     const subscribeColumn = createElement(tableData);
     const subscribeLink = createElement("a");
-    subscribeLink.href = `https://github.com/sponsors/tazz4843/sponsorships?sponsor=tazz4843&tier_id=${id}`;
+    subscribeLink.href = `https://github.com/sponsors/tazz4843/sponsorships?sponsor=tazz4843&tier_id=${tier["id"]}`;
     if (!dntActive) subscribeLink.addEventListener("click", function () {
-      sa_event("sponsor_tier_clicked_" + price)
+      sa_event("sponsor_tier_clicked_" + tier["p"])
     });
     subscribeLink.className = "btn";
     subscribeLink.innerHTML = "Subscribe";
