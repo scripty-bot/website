@@ -14,6 +14,6 @@ function x() {
     }
   }
 
-  permSetButton.addEventListener("click", permDisplayToggle)
+  permSetButton.addEventListener("click", permDisplayToggle);
 };
 x();
