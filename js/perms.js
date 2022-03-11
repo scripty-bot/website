@@ -1,8 +1,8 @@
 function x() {
   const permSetTable = document.getElementById("perm_sets");
-  const permSetTableDisplay = permSetTable.style.display;
   const permSetButton = document.getElementById("perm_sets_btn");
-  const permSetButtonInnerText = permSetButton.innerText;
+  let permSetTableDisplay = permSetTable.style.display;
+  let permSetButtonInnerText = permSetButton.innerText;
 
   function permDisplayToggle() {
     if (permSetTableDisplay === "none") {
