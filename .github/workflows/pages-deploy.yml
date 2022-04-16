@@ -1,0 +1,41 @@
+name: Deploy to gh-pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout main branch
+      - uses: actions/checkout@v2
+        name: Checkout
+
+      # Download minifier program and untar it to /tmp
+      # https://github.com/tdewolff/minify/releases/download/v2.11.1/minify_linux_amd64.tar.gz
+      - name: Download minifier
+        run: |
+          curl -L https://github.com/tdewolff/minify/releases/download/v2.11.1/minify_linux_amd64.tar.gz | tar xz -C /tmp
+
+      # # Minify all assets to ./out
+      # Remove the ./out directory if it exists
+      # Iterate over all files in the current directory and minify them to the same path with root in ./out
+      # Ignore hidden files and directories
+      # Copy all remaining files to ./out, ignoring hidden files and directories, and not overwriting existing files
+      - name: Minify
+        run: |
+          shopt -s extglob
+          rm -rf ./out || true;
+          for file in $(find . -type f -not -path '*/\.*'); do
+            minify "./$file" -o "./out/$file"
+          done
+          cp -Rn !(out) out/
+
+      # Publish to gh-pages
+      - name: Publish Site
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.ACCESS_TOKEN }}
+          publish_dir: ./out
