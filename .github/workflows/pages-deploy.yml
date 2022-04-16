@@ -29,9 +29,9 @@ jobs:
           shopt -s extglob
           rm -rf ./out || true;
           for file in $(find . -type f -not -path '*/\.*'); do
-            /tmp/minify "./$file" -o "./out/$file"
+            /tmp/minify "./$file" -o "./out/$file" || true;
           done
-          cp -Rn !(out) out/
+          cp -Rn !(out) out/ || true;
         shell: bash
 
       # Publish to gh-pages
