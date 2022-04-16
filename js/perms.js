@@ -5,13 +5,14 @@ function x() {
   let permSetButtonInnerText = permSetButton.innerText;
 
   function permDisplayToggle() {
-    if (permSetTableDisplay === "none") {
-      permSetTableDisplay = null;
-      permSetButtonInnerText = "Click here to hide them";
-    } else {
-      permSetTableDisplay = "none";
-      permSetButtonInnerText = "Click here to show them";
+    let permSetButtonInnerTextUpdate = "Click here to show them";
+    let permSetTableDisplayUpdate = "none";
+    if (permSetTable.style.display === "none") {
+      permSetTableDisplayUpdate = null;
+      permSetButtonInnerTextUpdate.replace(/show/i, "hide");
     }
+    permSetTable.style.display = permSetTableDisplayUpdate;
+    permSetButton.innerText = permSetButtonInnerTextUpdate;
   }
 
   permSetButton.addEventListener("click", permDisplayToggle);
