@@ -12,6 +12,15 @@ jobs:
       # Checkout main branch
       - uses: actions/checkout@v2
         name: Checkout
+        with:
+          fetch-depth: 0
+
+      # Build sitemap
+      - name: Build Sitemap
+        uses: cicirello/generate-sitemap@v1
+        with:
+          base-url-path: https://scripty.org
+          drop-html-extension: true
 
       # Download minifier program and untar it to /tmp
       # https://github.com/tdewolff/minify/releases/download/v2.11.1/minify_linux_amd64.tar.gz
