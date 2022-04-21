@@ -4,7 +4,7 @@
 # TEAM
 
     0/0 -- lead dev -- tazz4843
-    valkyrie_pilot -- mix of everything -- valkyrie_pilot
+    valkyrie_pilot -- mix of everything
 
 # TECHNOLOGY COLOPHON
 
