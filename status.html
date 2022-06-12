@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Scripty - Speech to Text for Discord</title>
+
+  <link rel="preload" href="/assets/jb_mono/woff2/jb.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/jb_mono/woff2/jb_bold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/css/main.css" as="style" type="text/css">
+  <link rel="preload" href="/css/jb_mono.css" as="style" type="text/css">
+  <link rel="preload" href="https://sa.scripty.org/latest.js" as="script" type="application/javascript">
+  <link rel="preload" href="/js/status.js" as="script" type="application/javascript">
+
+  <meta name="description" content="Scripty is an easy-to-use speech-to-text bot for your Discord server. Check it out!">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="Scripty - Speech to Text for Discord">
+  <meta property="og:description" content="Scripty is an easy-to-use speech-to-text bot for your Discord server. Check it out!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://scripty.org">
+
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+<div class="body">
+  <header>
+    <div class="header_title">
+      Scripty
+    </div>
+    <div class="header_links">
+      <a href="index.html" class="dyn_btn">Home</a><span class="btn_bullet">&nbsp;•&nbsp;</span>
+      <a href="invite.html" class="dyn_btn">Invite</a><span class="btn_bullet">&nbsp;•&nbsp;</span>
+      <a href="about.html" class="dyn_btn">About</a>
+    </div>
+  </header>
+
+  <h1 class="text-center">Bot Status</h1>
+
+  <div id="loading">
+    Loading<span id="loading_dots"></span>
+  </div>
+
+  <div id="on_error" style="display: none">
+    <h2>Error</h2>
+    Failed to load status.<br>
+    <span id="error_message"></span>
+  </div>
+
+  <div id="offline" style="display: none">
+    <h2>Offline</h2>
+    The bot is offline.
+  </div>
+
+  <noscript>Note: this page requires JS enabled.</noscript>
+
+  <div id="content" style="display: none">
+    In <span id="guild_count"></span> guilds,
+    with <span id="user_count"></span> users,
+    and <span id="channel_count"></span> voice channels,
+    on <span id="shard_count"></span> shards
+
+    <table id="shard_info" align="center">
+      <thead>
+      <tr>
+        <td>Shard ID</td>
+        <td>Latency</td>
+        <td>Status</td>
+        <td>Guilds</td>
+      </tr>
+      </thead>
+    </table>
+  </div>
+
+
+  <footer>
+    <hr>
+    made with <3 by 0/0 and valkyrie_pilot
+  </footer>
+</div>
+
+<!-- 100% privacy friendly analytics: https://simpleanalytics.com/scripty.org -->
+<script async defer data-collect-dnt="true" src="https://sa.scripty.org/latest.js"></script>
+<noscript><img src="https://sa.scripty.org/noscript.gif?collect-dnt=true" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+
+<script async defer src="/js/status.js"></script>
+</body>
+</html>
