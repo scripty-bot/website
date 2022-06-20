@@ -18,10 +18,21 @@ let shardCountGlobal;
 function shardIdButtonClick() {
   // get the guild id from the input field
   const guildId = document.getElementById('guild_id').value;
+  // try parsing the guild id as a number, if it fails, show an error and return
+  let guildIdNumber;
+  try {
+    guildIdNumber = parseInt(guildId);
+    if (isNaN(guildIdNumber)) {
+      throw new Error(null);
+    }
+  } catch (e) {
+    document.getElementById('shard_id_result').innerHTML = 'Invalid guild id';
+    return;
+  }
   // calculate the shard id
-  const shardId = calculateShardId(guildId, shardCountGlobal);
+  const shardId = calculateShardId(guildIdNumber, shardCountGlobal);
   // show the shard id
-  document.getElementById('shard_id_result').innerHTML = `Guild ${guildId} is on shard ${shardId}`;
+  document.getElementById('shard_id_result').innerHTML = `Guild ${guildIdNumber} is on shard ${shardId}`;
 }
 // register the click event listener for the shard id button
 document.getElementById('calculate_shard_id').addEventListener('click', shardIdButtonClick);
