@@ -3,7 +3,7 @@
 html {
   background: #000;
   color: #FFF;
-  font-family: "JetBrains Mono", Monospaced !important;
+  font-family: "JetBrains Mono", monospace !important;
 }
 
 body {
@@ -20,7 +20,6 @@ body {
 
 a, button {
   background-color: rgba(0,0,0,0%);
-  font-family: "JetBrains Mono", Monospaced !important;
   color: #999;
   transition: all 250ms ease-in-out;
   text-decoration: none;
