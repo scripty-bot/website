@@ -18,8 +18,9 @@ body {
   text-align: center;
 }
 
-a, button {
+a, button, input {
   background-color: rgba(0,0,0,0%);
+  font-family: "JetBrains Mono", monospace !important;
   color: #999;
   transition: all 250ms ease-in-out;
   text-decoration: none;

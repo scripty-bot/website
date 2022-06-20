@@ -8,6 +8,24 @@ function addDots() {
 }
 const dotsId = setInterval(addDots, 500);
 
+function calculateShardId(guildId, shardCount) {
+  // the shard ID of a guild is (ID >> 22) % shardCount
+  return (guildId >> 22) % shardCount;
+}
+
+let shardCountGlobal;
+
+function shardIdButtonClick() {
+  // get the guild id from the input field
+  const guildId = document.getElementById('guild_id').value;
+  // calculate the shard id
+  const shardId = calculateShardId(guildId, shardCountGlobal);
+  // show the shard id
+  document.getElementById('shard_id_result').innerHTML = `Guild ${guildId} is on shard ${shardId}`;
+}
+// register the click event listener for the shard id button
+document.getElementById('calculate_shard_id').addEventListener('click', shardIdButtonClick);
+
 async function x() {
   // fetch status from API (https://api.scripty.org/bot_stats/advanced)
   // return data: {"guild_count":92,"user_count":34,"channel_count":2382,"shard_count":1,"shard_info":{"0":{"latency":33225998,"connection_status":0,"guild_count":92}}}
@@ -33,6 +51,7 @@ async function x() {
   }
   // get shard count
   const shardCount = json.shard_count;
+  shardCountGlobal = shardCount;
   // get guild count
   const guildCount = json.guild_count;
   // get user count
