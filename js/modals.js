@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+function x() {
   // Functions to open and close a modal
   function openModal($el) {
     $el.classList.add('is-active');
@@ -41,4 +41,5 @@ document.addEventListener('DOMContentLoaded', () => {
       closeAllModals();
     }
   });
-});
+};
+x();
