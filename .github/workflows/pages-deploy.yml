@@ -19,7 +19,7 @@ jobs:
       - uses: actions/setup-node@v1
         name: Setup Node.js
         with:
-          node-version: 10
+          node-version: 16
 
       # Install build deps
       - name: Install build deps
@@ -27,7 +27,7 @@ jobs:
 
       # Build site
       - name: Build site
-        run: npm deploy
+        run: npm run deploy
 
       # Build sitemap
       - name: Build Sitemap
