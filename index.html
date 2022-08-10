@@ -3,6 +3,8 @@
 
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
   <title>Scripty - Speech to Text for Discord</title>
 
   <link rel="preload" href="/assets/jb_mono/woff2/jb.woff2" as="font" type="font/woff2" crossorigin="">
@@ -22,89 +24,67 @@
   <meta property="og:image" content="https://scripty.org/img/icon-128.webp">
 
   <link rel="stylesheet" href="/css/main.css">
-
-  <style>
-    img {
-      width: 100%;
-      height: 100%;
-    }
-
-    @media screen and (min-width: 1000px) {
-      #logo {
-        width: 50%;
-        height: 100%;
-        float:left;
-      }
-      .details_row_element {
-        float: left;
-        width: 33.3%;
-        padding-left: 4px;
-        padding-right: 4px;
-      }
-      div.body { max-width: 800px;}
-    }
-
-    @media screen and (max-width: 1000px) {
-      #logo {
-        height: 50vh;
-        aspect-ratio: 1;
-        margin: auto;
-      }
-    }
-  </style>
 </head>
 
 <body>
-<div class="body">
-  <header>
-    <div class="header_title">
-      Scripty
-    </div>
-    <div class="header_links">
-      <a href="index.html" class="dyn_btn">Home</a><span class="btn_bullet">&nbsp;•&nbsp;</span>
-      <a href="invite.html" class="dyn_btn">Invite</a><span class="btn_bullet">&nbsp;•&nbsp;</span>
-      <a href="about.html" class="dyn_btn">About</a>
-    </div>
-  </header>
+<div class="container is-widescreen">
+  <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/"><h1>Scripty</h1></a>
 
-  <div id="intro">
-    <div id="logo">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="main-navbar">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="main-navbar" class="navbar-menu">
+      <div class="navbar-start">
+        <a href="invite.html" class="navbar-item">Invite</a>
+        <a href="about.html" class="navbar-item">About</a>
+      </div>
+      <div class="navbar-end"></div>
+    </div>
+  </nav>
+
+  <section class="section columns">
+    <div class="column is-one-quarter">
       <img src="/img/icon.svg" alt="Scripty's Logo" height="300" width="300">
     </div>
-    <h1>Scripty</h1>
-    <h2>The best speech-to-text Discord bot!</h2>
+    <div class="column">
+      <h1 class="title">Scripty</h1>
+      <h2 class="subtitle">The best speech-to-text Discord bot!</h2>
 
-    <p>
-      Have a deaf/HoH friend? Want to be able to moderate voice chats as easily as text chats?
-      No matter your reason, Scripty comes to the rescue! Set it up once and forget about it forever.
-      The bot will sit quietly and transcript all of your conversations without having to do anything else.
-      For free. Forever.
-    </p>
-  </div>
-  <div style="overflow:hidden;display: inline-block;">
-    <a href="invite.html" class="btn">Invite Now</a>
-  </div>
-  <br>
-  <br>
-  <div id="details">
+      <p>
+        Have a deaf/HoH friend? Want to be able to moderate voice chats as easily as text chats?
+        No matter your reason, Scripty comes to the rescue! Set it up once and forget about it forever.
+        The bot will sit quietly and transcript all of your conversations without having to do anything else.
+        For free. Forever.
+      </p>
+
+      <a href="invite.html" class="button is-black">Invite Now</a>
+    </div>
+  </section>
+
+  <section class="section">
     <h2>Why Scripty?</h2>
 
-    <div class="details_row">
-      <div class="details_row_element">
+    <div class="columns">
+      <div class="column">
         <h3>It's fast.</h3>
         <p>
           Scripty utilizes the latest technologies to increase its speed, allowing transcriptions to be produced in
           just hundredths of a second.
         </p>
       </div>
-      <div class="details_row_element">
+      <div class="column">
         <h3>It's open source.</h3>
         <p>
-          Every single part of Scripty is open source <a href="https://github.com/scripty-bot">on GitHub</a>, from the
+          Every single part of Scripty is open source <a href="https://github.com/scripty-bot" class="default-color">on GitHub</a>, from the
           core bot code itself to the speech-to-text algorithm.
         </p>
       </div>
-      <div class="details_row_element">
+      <div class="column">
         <h3>It's community run.</h3>
         <p>
           Hundreds of thousands of people, making up over 20,000 hours of audio, came together to make a public voice
@@ -112,45 +92,125 @@
         </p>
       </div>
     </div>
-    <div class="details_row">
-      <div class="details_row_element">
+    <div class="columns">
+      <div class="column">
         <h3>It's easy to use.</h3>
         <p>
           Set it up with one single command, and then just ask it to join a voice chat. That's it. No bullshit.
         </p>
       </div>
-      <div class="details_row_element">
+      <div class="column">
         <h3>It's free.</h3>
         <p>
           Scripty's core features will always be free, forever.
         </p>
       </div>
-      <div class="details_row_element">
+      <div class="column">
         <h3>It's private.</h3>
         <p>
           Absolutely no logs are kept about your transcriptions or audio. What happens in your server, stays in your
-          server.
+          server. You're always in control of your private data.
         </p>
       </div>
     </div>
-  </div>
-  <br>
+    <h3>Convinced yet?</h3>
+    <a href="invite.html" class="button is-black">Invite Now</a>
+  </section>
 
-  <div id="links">
-    <div class="btn_wrapper">
-      <a href="invite.html" class="btn">Invite</a>
-      <a href="https://docs.scripty.org" class="btn">Docs</a>
-      <a href="about.html" class="btn">About</a>
+  <section class="section">
+    <h2>Scripty's Features</h2>
+    <div class="columns">
+      <div class="column">
+        <h3>Transcriptions</h3>
+        <p>
+          Scripty revolves around transcriptions. Scripty is the only bot out there that does this all offline,
+          without sending any of your voice to third-parties, like Facebook or Google.
+          Perfect for anyone, but especially the privacy-oriented user.
+        </p>
+      </div>
+      <div class="column">
+        <h3>Voice Assistant (coming soon!)</h3>
+        <p>
+          Ever felt too lazy to Alt+Tab back into Discord just to change the music currently playing?
+          Scripty is the answer. If you use a supported bot, you can just say, "Hey Scripty, skip this song".
+          Want to customize the commands? You can do that as well, on our dashboard.
+        </p>
+      </div>
+      <div class="column">
+        <h3>Voice Chat Moderation (coming soon!)</h3>
+        <p>
+          Don't have a voice chat because you find it hard to moderate? Scripty is your solution.
+          Want to send a warning message when people speak offensive words? You can do that.
+          Need to remove users from voice chats when they break your rules? You can do that.
+        </p>
+      </div>
     </div>
-    <div id="links_wrapper">
-      <a href="https://github.com/scripty-bot" class="dyn_btn">GitHub</a><span class="btn_bullet">&nbsp;•&nbsp;</span>
-      <a href="https://discord.gg/VH35msCN38" class="dyn_btn">Discord</a><span class="btn_bullet">&nbsp;•&nbsp;</span>
-      <a href="premium.html" class="dyn_btn">Premium</a><span class="btn_bullet">&nbsp;•&nbsp;</span>
-      <a href="privacy.html" class="dyn_btn">Privacy Policy</a><span class="btn_bullet">&nbsp;•&nbsp;</span>
-      <a href="status.html" class="dyn_btn">Bot Status</a><span class="btn_bullet">&nbsp;•&nbsp;</span>
-      <a href="https://i20n.scripty.org" class="dyn_btn">Translations</a>
+    <div class="columns">
+      <div class="column">
+        <h3>Text to Speech (coming soon!)</h3>
+        <p>
+          You can have Scripty listen for you already, wouldn't it be great if it could speak for you as well?
+          We think the same thing. Scripty can speak for you, with dozens of voices, and a dazzling array of controls.
+        </p>
+      </div>
+      <div class="column">
+        <h3>Custom Voice (coming soon, premium only!)</h3>
+        <p>
+          Don't like the built-in text-to-speech voices? We've got the solution.
+          With a 15 second recording, we can train a new voice for you, that sounds just like you.
+        </p>
+      </div>
+      <div class="column">
+        <h3>Complete Privacy</h3>
+        <p>
+          Human voice is very complex. We don't log any data about you. We don't keep any logs, no matter if you're paying or not. Full stop.
+          You can always delete all the data Scripty has stored on you with just one command.
+        </p>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <section class="section">
+    <h2>Still not convinced?</h2>
+    <p>Why not take a look at our comparison with the only other known transcription bot out there?</p>
+    <a href="/scripty-vs-scriptly.html" class="button is-black">Scripty vs Scriptly</a>
+  </section>
+
+  <section class="section">
+    <h2>Got questions?</h2>
+    <p>
+      We've got the answers. Join our Discord server to ask any question you might have about Scripty,
+      to make sure it's the right fit for your server. (hint: it is)
+    </p>
+    <a href="https://discord.gg/VH35msCN38" class="button is-black">Join Server</a>
+  </section>
+
+  <section class="section">
+    <h2>Premium</h2>
+    <p>
+      You knew it was coming. We don't like making people pay for this.
+      Go check out our Premium tiers at the button below. Help support us in our mission to create a completely free,
+      completely private, open-source transcription bot for Discord.
+    </p>
+    <a href="/premium.html" class="button is-black">Premium</a>
+  </section>
+
+  <section class="section">
+    <h2>Important Links</h2>
+    <div class="buttons is-centered">
+      <a href="invite.html" class="button is-black">Invite</a>
+      <a href="https://docs.scripty.org" class="button is-outlined is-transparent">Docs</a>
+      <a href="about.html" class="button is-outlined is-transparent">About</a>
+    </div>
+    <div id="buttons is-centered">
+      <a href="https://github.com/scripty-bot" class="button is-outlined is-transparent is-small">GitHub</a>
+      <a href="https://discord.gg/VH35msCN38" class="button is-outlined is-transparent is-small">Discord</a>
+      <a href="premium.html" class="button is-outlined is-transparent is-small">Premium</a>
+      <a href="privacy.html" class="button is-outlined is-transparent is-small">Privacy Policy</a>
+      <a href="status.html" class="button is-outlined is-transparent is-small">Bot Status</a>
+      <a href="https://i20n.scripty.org" class="button is-outlined is-transparent is-small">Translations</a>
+    </div>
+  </section>
 
   <footer>
     <hr>

@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Scripty - Speech to Text for Discord</title>
+
+  <link rel="preload" href="/assets/jb_mono/woff2/jb.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/jb_mono/woff2/jb_bold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/css/main.css" as="style" type="text/css">
+  <link rel="preload" href="/css/jb_mono.css" as="style" type="text/css">
+  <link rel="preload" href="https://sa.scripty.org/latest.js" as="script" type="application/javascript">
+  <link rel="preload" href="/img/icon.svg" as="image" type="image/svg+xml">
+
+  <meta name="description" content="Scripty is an easy-to-use speech-to-text bot for your Discord server. Check it out!">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="Scripty - Speech to Text for Discord">
+  <meta property="og:description" content="Scripty is an easy-to-use speech-to-text bot for your Discord server. Check it out!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://scripty.org">
+  <meta property="og:image" content="https://scripty.org/img/icon-128.webp">
+
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+<div class="container is-widescreen">
+  <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/"><h1>Scripty</h1></a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="main-navbar">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="main-navbar" class="navbar-menu">
+      <div class="navbar-start">
+        <a href="invite.html" class="navbar-item">Invite</a>
+        <a href="about.html" class="navbar-item">About</a>
+      </div>
+      <div class="navbar-end"></div>
+    </div>
+  </nav>
+
+  <section class="section">
+    <h1 class="title">Scripty vs Scriptly</h1>
+
+    <a href="https://scriptly.xyz">You can check out Scriptly here.</a>
+
+    <p>
+      We'll be the first to admit, we're biased. We made Scripty, so take what we say with a grain of salt.<br>
+      Most of the information we got about Scriptly was obtained from its site, and through some internet sleuthing,
+      so it may not be 100% accurate.
+    </p>
+
+    <p>
+      Note: this page was last updated August 8, 2022, so it may be out of date.
+      Refer directly to Scriptly and Scripty's websites for the latest up-to-date information.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Details</h2>
+
+    <p>
+      Scripty and Scriptly happened to be named very similarly to each other by pure random chance.
+      Neither of us intended to be named similar to the other.<br>
+      If you compare the creation dates of both bots, you'll notice Scripty was created two months earlier than Scriptly,
+      on February 17th, 2021, whereas Scriptly was created April 10th, 2021.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Features</h2>
+
+    <p>
+      According to Scriptly's homepage, they offer the following features:
+    </p>
+    <blockquote><i>
+      It provides immersive features such as voice to text transcription, text to speech vocality,
+      and, in the premium version, translation via voice between 2 languages.
+    </i></blockquote>
+    <p>
+      Their documentation offers more information on what they support, including being able to customize your text-to-speech voice.
+    </p>
+
+    <p>
+      On the other hand, at the moment, Scripty only supports speech-to-text, but plans to support text-to-speech in the future.
+      Translation, however, is not planned, due to the cost of running this whilst also ensuring user privacy by not sharing data with third parties.
+      Scripty also plans to support custom text-to-speech voices in the future.
+      <br>
+      You can refer to the table below for a tabular breakdown of the features between the two bots.
+    </p>
+    <table class="table is-transparent is-striped" align="center">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Scripty</th>
+          <th>Scriptly</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Speech-to-text</td>
+        <td>✅</td>
+        <td>✅</td>
+      </tr>
+      <tr>
+        <td>Text-to-speech</td>
+        <td>🚧</td>
+        <td>✅</td>
+      </tr>
+      <tr>
+        <td>Translation of transcripted messages</td>
+        <td>❌</td>
+        <td>🚧</td>
+      </tr>
+      <tr>
+        <td>Voice assistant functionality</td>
+        <td>🚧</td>
+        <td>❌</td>
+      </tr>
+      <tr>
+        <td>Voice chat moderation</td>
+        <td>🚧</td>
+        <td>❌</td>
+      </tr>
+      <tr>
+        <td>Text-to-speech voice customization</td>
+        <td>🚧</td>
+        <td>✅</td>
+      </tr>
+      <tr>
+        <td>Custom voice that sounds like you</td>
+        <td>🚧</td>
+        <td>❌</td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="section">
+    <h2>Premium Features</h2>
+
+    <p>
+      According to Scriptly's homepage, they currently do <i>not</i> offer premium, but when it is released, it will include the following features:
+    </p>
+    <blockquote><i>
+      The premium version of the bot has many features that help improve the experience for our users.<br><br>
+
+      • Translation via voice between 2 people.<br>
+      • Higher quality transcription (more accurate)<br>
+      • More fluent TTS (text to speech)<br>
+      • Faster transcription<br>
+      • Priority support in our support server<br>
+      • Priority access to new features<br>
+      • And more!
+    </i></blockquote>
+
+    <p>
+      Scripty, on the other hand, plans to support Premium incredibly soon. In fact, by the time you read this, it's very likely already out.
+      Scripty's Premium does not change the quality or speed of any parts of the bot.
+      We believe everyone, regardless of their ability to pay, should experience the highest quality transcriptions we can offer them.<br>
+
+      As with last time, you can view a tabular breakdown of both bots in the table below.
+    </p>
+
+    <table class="table is-transparent is-striped" align="center">
+      <thead>
+        <tr>
+          <th></th>
+          <th align="center">Scripty</th>
+          <th align="center">Scriptly</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Translation of voice</td>
+        <td>No</td>
+        <td>Premium</td>
+      </tr>
+      <tr>
+        <td>Higher quality/speed</td>
+        <td>Free</td>
+        <td>Premium</td>
+      </tr>
+      <tr>
+        <td>Priority Support</td>
+        <td>Premium</td>
+        <td>Premium</td>
+      </tr>
+      <tr>
+        <td>Increased user limit in voice chats</td>
+        <td>Premium</td>
+        <td>Unknown</td>
+      </tr>
+      <tr>
+        <td>Access to 2 bots</td>
+        <td>Premium</td>
+        <td>Unknown (likely no)</td>
+      </tr>
+      <tr>
+        <td>Custom bot for your server</td>
+        <td>Premium ($100/mo)</td>
+        <td>No</td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="section">
+    <h2>Privacy</h2>
+
+    <p>
+      Note that we are not Scriptly's team. We do not know for sure whether any of Scriptly's information is 100% true.
+      This is what we've deduced based on some internet sleuthing.
+    </p>
+
+    <p>
+      Scriptly uses <a href="https://wit.ai">Wit.Ai</a>, a free speech-to-text API made by Facebook (now Meta).<br>
+      Due to this API being owned by Meta, and being free, there is an <i>extremely</i> high chance Meta is using
+      your voice data for their own purposes, including marketing and advertising. To be completely clear,
+      the Scriptly team is (very likely, we can't verify as Scriptly is closed-source) not mining any of your data.
+      Meta is mining this data.
+    </p>
+    <button class="js-modal-trigger button is-danger" data-target="personal-opinion-modal">Personal Opinion (click to show)</button>
+
+    <p>
+      Scripty, on the other hand, uses <a href="https://github.com/coqui-ai/STT">Coqui STT</a>.
+      This is an offline speech-to-text library, meaning it runs entirely on our machines.
+      No data is sent to any third parties, and we do not use any of your data for any purposes.
+      You can independently verify this, as Scripty is open-source at <a href="https://github.com/scripty-bot/scripty">GitHub</a>.
+      However, due to this, Scripty is much more expensive to run, which forces us to offer expensive Premium.
+    </p>
+
+    <table class="table is-transparent is-striped" align="center">
+      <thead>
+      <tr>
+        <th></th>
+        <th align="center">Scripty</th>
+        <th align="center">Scriptly</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Sends voice to third parties</td>
+        <td>❌</td>
+        <td>✅</td>
+      </tr>
+      <tr>
+        <td>Third-parties use voice for own purposes</td>
+        <td>❌</td>
+        <td>✅</td>
+      </tr>
+      <tr>
+        <td>All data stays on developer-controlled servers forever</td>
+        <td>✅</td>
+        <td>❌</td>
+      </tr>
+      <tr>
+        <td>Developers use voice for own purposes</td>
+        <td>❌</td>
+        <td>❌</td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="section">
+    <h2>Invite</h2>
+    <p>
+      It's now up to you which bot you'd like to use. We'll offer links to both bots here.
+    </p>
+    <div class="columns">
+      <div class="column">
+        <a href="/invite.html" class="button is-black">Invite Scripty</a>
+      </div>
+      <div class="column">
+        <a href="https://scriptly.xyz/invite" class="button is-white">Invite Scriptly</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <hr>
+    made with <3 by 0/0 and valkyrie_pilot
+  </footer>
+
+  <div id="personal-opinion-modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Personal Opinion</p>
+        <button class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        Meta is a company well known for its privacy abuses (see links below). We can pretty much guarantee Meta is mining the data
+        that Scriptly sends it in the form of voice, and using it as an additional source of data on you,
+        which they can then sell to data brokers.<br>
+        I would personally not use Scriptly because of this.<br>
+        There's an insane number of articles, so many, that this isn't even the tip of the iceberg.
+        Go search up "facebook privacy" and you'll find a long, long, long list of articles.<br>
+        I personally strongly recommend against giving Facebook/Meta any more of your data, which means not using Scriptly.
+        <br><br>
+
+        <a href="https://www.vice.com/en/article/wjw889/facebook-said-it-wasnt-listening-to-your-conversations-it-was">
+          Vice: Aug 14, 2019: Facebook Said It Wasn't Listening to Your Conversations. It Was.
+        </a>
+        <blockquote>
+          Following an investigation by Bloomberg, the company admitted that it had been employing
+          third-party contractors to transcribe the audio messages that users exchanged on its Messenger app.
+        </blockquote>
+        <br><br>
+
+        <a href="https://eu.usatoday.com/story/tech/talkingtech/2019/06/27/does-facebook-listen-to-your-conversations/1478468001/">
+          USAToday: June 27, 2019: Is Facebook listening to me? Why those ads appear after you talk about things
+        </a>
+        <blockquote>
+          “It’s like they’re stalking you,” says Court. “They put all sorts of circumstantial evidence together,
+          and you’re marketed to as if they’re listening to your conversations.”
+        </blockquote>
+        With Scriptly sending your conversation to Facebook for transcription, they quite literally can now listen to your conversations.
+        <br><br>
+
+        <a href="https://edition.cnn.com/2022/02/15/tech/facebook-internet-tracking-settlement/index.html">
+          CNN: Feb 15, 2022: Meta agrees to pay $90 million to settle lawsuit over Facebook tracking users' online activity
+        </a>
+        <blockquote>
+          Facebook-parent Meta has agreed to pay $90 million to settle a decade-old class action lawsuit over a
+          practice that allowed the social network to track users' activity across the internet, even if they had
+          logged out of the platform.
+        </blockquote>
+        And they definitely will use these transcripts and link them back to you.
+        <br><br>
+
+        <a href="https://www.vice.com/en/article/n7zevd/this-is-the-data-facebook-gave-police-to-prosecute-a-teenager-for-abortion">
+          Vice: Aug 9, 2022: This Is the Data Facebook Gave Police to Prosecute a Teenager for Abortion
+        </a>
+        <blockquote>
+          A 17-year-old girl and her mother have been charged with a series of felonies and misdemeanors after an
+          apparent medication abortion at home in Nebraska. The state’s case relies on evidence from the teenager’s
+          private Facebook messages, obtained directly from Facebook by court order, which show the mother and daughter
+          allegedly bought medication online to induce abortion, and then disposed of the body of the fetus.
+        </blockquote>
+        Which they can (and are required to) then turn over to law enforcement if requested in any criminal trials.
+        <br><br>
+
+        <a href="https://www.nbcnews.com/tech/social-media/timeline-facebook-s-privacy-issues-its-responses-n859651">
+          NBC News: Mar 24, 2018: A timeline of Facebook's privacy issues - and its responses
+        </a>
+        <blockquote>
+          In February [2018], Facebook was ordered to stop collecting private information about Belgian users on third-party
+          sites through the use of cookies. Facebook was also ordered to delete all data it collected illegally from
+          Belgians, including those who aren't Facebook users but may have still landed on a Facebook page, or risk
+          being fined up to 100 million euros.
+        </blockquote>
+        <br><br>
+
+        <a href="https://www.ftc.gov/news-events/news/press-releases/2019/07/ftc-imposes-5-billion-penalty-sweeping-new-privacy-restrictions-facebook">
+          FTC: Jul 24, 2019: FTC Imposes $5 Billion Penalty and Sweeping New Privacy Restrictions on Facebook
+        </a>
+        <blockquote>
+          The $5 billion penalty against Facebook is the largest ever imposed on any company for violating consumers’
+          privacy and almost 20 times greater than the largest privacy or data security penalty ever imposed worldwide.
+          It is one of the largest penalties ever assessed by the U.S. government for any violation.
+        </blockquote>
+        <br><br>
+
+        <a href="https://edition.cnn.com/2021/04/04/tech/facebook-user-info-leaked/index.html">
+          CNN: Apr 4, 2021: Half a billion Facebook users' information posted on hacking website, cyber experts say
+        </a>
+        <blockquote>
+          The personal information of about half a billion Facebook users, including their phone numbers,
+          have been posted to a website used by hackers, cybersecurity experts say.
+        </blockquote>
+        And you definitely can't trust Facebook with the security of your data either. This isn't the first time, and
+        won't be the last.
+        <br><br>
+
+        <a href="https://www.techtarget.com/searchsecurity/news/252462588/A-recent-history-of-Facebook-security-and-privacy-issues">
+          TechTarget: Apr 30, 2019: A recent history of Facebook security and privacy issues
+        </a>
+        <blockquote>
+          Starting 2019, Facebook was caught in January exploiting a loophole in Apple's iOS policies and distributing
+          a research app using an enterprise certificate. With this type of certificate, the app was able to gain
+          root access to a user's device and gather information, such as constant location tracking and messages and
+          media from third-party apps.
+        </blockquote>
+        They'll go to any length required to get your data. When Apple noticed what they did here, they banned this
+        certificate entirely, causing internal builds of Facebook to break.
+        <br><br>
+
+        <a href="https://www.techtarget.com/searchsecurity/news/252460110/Hundreds-of-millions-of-Facebook-passwords-exposed-internally">
+          TechTarget: Mar 22, 2019: Hundreds of millions of Facebook passwords exposed internally
+        </a>
+        <blockquote>
+          Hundreds of millions of Facebook passwords were exposed within the company, sparking a debate among infosec
+          experts over whether it was a simple mistake or an example of bad-faith actions by the company.<br>
+
+          Facebook Thursday admitted that hundreds of millions of user passwords were stored in plaintext within the company's network.
+        </blockquote>
+        You <i>definitely</i> can't trust Facebook with security.
+        <br><br>
+
+        <a href="https://www.computerweekly.com/news/252461090/Third-party-Facebook-apps-expose-540-million-users-details">
+          Computer Weekly: Apr 04, 2019: Third-party Facebook apps expose 540 million users' details
+        </a>
+        <!--suppress SpellCheckingInspection -->
+        <blockquote>
+          A year after the Cambridge Analytica data sharing scandal, researchers have discovered publicly exposed data
+          stores belonging to two more third-party developed Facebook apps.<br>
+
+          The cyber risk team at security firm UpGuard found one data store originating from the Mexico-based media
+          company Cultura Colectiva of 146GB, containing more than 540 million records, detailing comments, likes,
+          reactions, account names, Facebook IDs and more.
+        </blockquote>
+        <br><br>
+
+        <a href="https://en.wikipedia.org/wiki/Privacy_concerns_with_Facebook">
+          Wikipedia: Privacy concerns with Facebook
+        </a>
+        <br><br>
+
+        <a href="https://twitter.com/cherthedev/status/1485679843282878464">
+          Twitter: @cherthedev: Facial recognition software is terrifying, honestly.
+        </a>
+        <!--suppress SpellCheckingInspection -->
+        <blockquote>
+          @Meta /Facebook auto-tagged this woman as me on someone else’s photo dump.<br>
+
+          Turns out she’s my great-great-great grandmother, Maria Schäfer, who immigrated to the US from Russia in 1899.
+        </blockquote>
+        And they have the algorithmic power to link your voice to you.
+        All it takes is a tiny bit of training data, which they have.
+        <br><br>
+
+        <a href="https://www.theverge.com/2021/11/2/22759613/meta-facebook-face-recognition-automatic-tagging-feature-shutdown">
+          The Verge: Nov 2, 2021: Facebook is shutting down its Face Recognition tagging program
+        </a>
+        <blockquote>
+          Pesenti says more than one-third of Facebook’s daily active users had opted into Face Recognition scanning,
+          and over a billion face recognition profiles will be deleted as part of the upcoming change.
+        </blockquote>
+        They had a billion plus people stored in their facial recognition system. Given Facebook also gets videos,
+        with human speech uploaded, it is not a stretch to assume they can very easily do the same with your voice.
+        <br><br>
+
+        <a href="https://text.npr.org/986005820">
+          NPR: Apr 9, 2021: After Data Breach Exposes 530 Million, Facebook Says It Will Not Notify Users
+        </a>
+        <blockquote>
+          Facebook decided not to notify over 530 million of its users whose personal data was lifted in a breach
+          sometime before August 2019 and was recently made available in a public database. Facebook also has no plans
+          to do so, a spokesperson said.<br>
+          Phone numbers, full names, locations, some email addresses, and other details from user profiles were posted
+          to an amateur hacking forum on Saturday, Business Insider reported last week.
+        </blockquote>
+        <br><br>
+
+        <a href="https://gizmodo.com/facebook-knows-how-to-track-you-using-the-dust-on-your-1821030620">
+          Gizmodo: Jan 11, 2018: Facebook Knows How to Track You Using the Dust on Your Camera Lens
+        </a>
+        <blockquote>
+          Patents filed by Facebook that mention People You May Know show some ingenious methods that Facebook has
+          devised for figuring out that seeming strangers on the network might know each other. One filed in 2015
+          describes a technique that would connect two people through the camera metadata associated with the photos
+          they uploaded. It might assume two people knew each other if the images they uploaded looked like they were
+          titled in the same series of photos—IMG_4605739.jpg and IMG_4605742, for example—or if lens scratches or dust
+          were detectable in the same spots on the photos, revealing the photos were taken by the same camera.
+        </blockquote>
+        Hell, if they can track you using <i>camera lens dust</i>, they're more than capable of doing the same with your voice.
+        <br><br>
+
+        <a href="https://www.theverge.com/2021/2/27/22304618/judge-approves-facebook-privacy-settlement-illinois-facial-recognition">
+          The Verge: Feb 27, 2021: Judge approves $650 million Facebook privacy settlement over facial recognition feature
+        </a>
+        <blockquote>
+          Chicago attorney Jay Edelson sued Facebook in Cook County Circuit Court back in 2015, alleging that the
+          platform’s use of facial recognition tagging was not allowed under the Illinois Biometric Information Privacy
+          Act. The lawsuit claimed that Facebook’s Tag Suggestions tool, which scanned faces in users’ photos and
+          offered suggestions about who the person might be, stored biometric data without users’ consent in violation
+          of the Illinois law.
+        </blockquote>
+        And they will do it.
+        <br><br>
+
+        <a href="https://www.washingtonpost.com/business/2022/02/15/texas-lawsuit-facebook-meta-privacy-facial-recognition/">
+          Washington Post: Feb 15, 2022: Texas sues Facebook parent Meta over use of facial recognition, alleging privacy violations
+        </a>
+        <blockquote>
+          Texas Attorney General Ken Paxton (R) on Monday sued Facebook’s parent company, Meta Platforms Inc.,
+          alleging that the social media giant for years collected Texans’ biometric data without their full consent,
+          in violation of state privacy laws.<br>
+
+          Paxton’s lawsuit, filed in district court in Harrison County, alleges that Facebook collected users’
+          biometric identifiers from photos and videos without properly informing them, shared the data with third
+          parties and failed to delete it in a timely way, from about 2010 to late 2021 — when Meta announced it would
+          shut down Facebook’s facial recognition system and delete the data it collected on more than 1 billion people.
+        </blockquote>
+        As lawsuit after lawsuit shows.
+        <br><br>
+
+        <a href="https://www.newscientist.com/article/dn27761-facebook-can-recognise-you-in-photos-even-if-youre-not-looking/">
+          NewScientist: Jun 22, 2015: Facebook can recognise you in photos even if you're not looking
+        </a>
+        <blockquote>
+          An experimental algorithm out of Facebook’s artificial intelligence lab can recognise people in photographs
+          even when it can’t see their faces. Instead it looks for other unique characteristics like your hairdo,
+          clothing, body shape and pose.
+        </blockquote>
+        Not looking? We can figure out who you are.
+        <br><br>
+
+        <a href="https://12ft.io/proxy?q=https%3A%2F%2Fwww.wsj.com%2Famp%2Farticles%2Ffacebook-really-is-spying-on-you-just-not-through-your-phones-mic-1520448644">
+          Wall Street Journal: Mar 7, 2018: Facebook Really Is Spying on You, Just Not Through Your Phone’s Mic (proxied via 12ft.io for paywall bypass)
+        </a>
+        Care for more spying and tracking?
+        <br><br>
+
+        <a href="https://gizmodo.com/facebook-figured-out-my-family-secrets-and-it-wont-tel-1797696163">
+          Gizmodo: Aug 25, 2018: Facebook Figured Out My Family Secrets, And It Won't Tell Me How
+        </a>
+        <blockquote>
+          Rebecca Porter, we discovered, is my great aunt, by marriage. She is married to my biological grandfather’s
+          brother; she met him 35 years ago, the year after I was born. Facebook knew my family tree better than I did.
+        </blockquote>
+        Hey, if it can figure out your family tree, when everyone between you and this other person doesn't use
+        Facebook at all, it sure as hell can figure out who you are from your voice.
+        <br><br>
+
+        <a href="https://www.forbes.com/sites/parmyolson/2018/09/26/exclusive-whatsapp-cofounder-brian-acton-gives-the-inside-story-on-deletefacebook-and-why-he-left-850-million-behind/#66a1adc63f20">
+          Forbes: Sep 26, 2018: Exclusive: WhatsApp Cofounder Brian Acton Gives The Inside Story On #DeleteFacebook And Why He Left $850 Million Behind
+        </a>
+        <blockquote>
+          If walking away from $850 million feels like penance, Acton has gone further. He has supercharged a small
+          messaging app, Signal, run by a security researcher named Moxie Marlinspike with a mission to put users
+          before profit, giving it $50 million and turning it into a foundation. Now he’s working with the same people
+          who built the opensource encryption protocol that is part of Signal and protects WhatsApp’s 1.5 billion users
+          and that also sits as an option on Facebook Messenger, Microsoft’s Skype and Google’s Allo messenger.
+          Essentially, he’s re-creating WhatsApp in the pure, idealized form it started: free messages and calls,
+          with end-to-end encryption and no obligations to ad platforms.
+        </blockquote>
+        Walking away from nearly $1 billion over Facebook's severe lack of privacy should say something.
+        <br><br>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button">Close</button>
+      </footer>
+    </div>
+  </div>
+</div>
+
+<!-- 100% privacy friendly analytics: https://simpleanalytics.com/scripty.org -->
+<script async defer data-collect-dnt="true" src="https://sa.scripty.org/latest.js"></script>
+<noscript><img src="https://sa.scripty.org/noscript.gif?collect-dnt=true" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+</body>
+</html>

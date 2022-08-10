@@ -1,13 +1,3 @@
-let c = 0;
-function addDots() {
-  c++;
-  if (c > 3) {
-    c = 0;
-  }
-  document.getElementById('loading_dots').innerHTML = '.'.repeat(c);
-}
-const dotsId = setInterval(addDots, 500);
-
 function calculateShardId(guildId, shardCount) {
   // the shard ID of a guild is (ID >> 22) % shardCount
   return (guildId >> 22) % shardCount;
@@ -52,12 +42,10 @@ async function x() {
       // the bot's offline
       document.getElementById('offline').style.display = null;
     } else {
-      // show the error in the on_error div, and hide the loading dots
+      // show the error in the on_error div
       document.getElementById('error_message').innerHTML = error;
       document.getElementById('on_error').style.display = null;
     }
-    // stop the loading dots
-    clearInterval(dotsId);
     return;
   }
   // get shard count
@@ -70,15 +58,27 @@ async function x() {
   // get channel count
   const channelCount = json.voice_channel_count;
   // show this data in the status page
-  document.getElementById('shard_count').innerHTML = shardCount;
-  document.getElementById('guild_count').innerHTML = guildCount;
-  document.getElementById('user_count').innerHTML = userCount;
-  document.getElementById('channel_count').innerHTML = channelCount;
+  document.getElementById('shard_count').innerHTML = shardCount.toLocaleString();
+  document.getElementById('guild_count').innerHTML = guildCount.toLocaleString();
+  document.getElementById('user_count').innerHTML = userCount.toLocaleString();
+  document.getElementById('channel_count').innerHTML = channelCount.toLocaleString();
+
+  const shardInfoDiv = document.getElementById('shard_info');
 
   // for every shard, construct a table row with the shard info
+  // recreate the following HTML tree
+  /*
+          <div class="column is-5-mobile is-4-tablet-only is-3-desktop-only is-2-widescreen">
+          <div class="notification is-status" id="shard_0">
+            <h3>Shard 0</h3>
+            <p class="heading"><i>online</i></p>
+            <p class="heading">00.000ms</p>
+            <p class="heading">69 servers</p>
+          </div>
+        </div>
+  */
+  // replace is-status with is-success if connected, is-danger if disconnected, and is-warning if otherwise
   for (let i = 0; i < shardCount; i++) {
-    // get shard id
-    const shardId = i;
     // get shard latency (in ns)
     const shardLatency = json.shard_info[i].latency;
     // get shard connection status
@@ -118,31 +118,61 @@ async function x() {
         connectionStatusString = 'Unknown';
         break;
     };
+
+    // map connection status to class names
+    // 0 => is-success
+    // 2 => is-danger
+    // 1 | <= 3 => is-warning
+    let connectionStatusClass;
+    switch (shardConnectionStatus) {
+      case 0:
+        connectionStatusClass = 'is-success';
+        break;
+      case 2:
+        connectionStatusClass = 'is-danger';
+        break;
+      default:
+        connectionStatusClass = 'is-warning';
+        break;
+    };
+
     // format shard latency as milliseconds with three decimal places
     const shardLatencyString = `${(shardLatency / 1000000).toFixed(3)}ms`;
 
-    // construct table row
-    const row = document.createElement('tr');
-    const shardIdCell = document.createElement('td');
-    const latencyCell = document.createElement('td');
-    const connectionStatusCell = document.createElement('td');
-    const guildCountCell = document.createElement('td');
-    shardIdCell.innerText = shardId;
-    latencyCell.innerText = shardLatencyString;
-    connectionStatusCell.innerText = connectionStatusString;
-    guildCountCell.innerText = shardGuildCount;
-    row.appendChild(shardIdCell);
-    row.appendChild(latencyCell);
-    row.appendChild(connectionStatusCell);
-    row.appendChild(guildCountCell);
-    document.getElementById('shard_info').appendChild(row);
+    // construct div tree
+    const div = document.createElement('div');
+    div.className = 'column is-5-mobile is-4-tablet-only is-3-desktop-only is-2-widescreen';
+    const notification = document.createElement('div');
+    notification.className = `notification ${connectionStatusClass}`;
+    notification.id = `shard_${i}`;
+    const h3 = document.createElement('h3');
+    h3.innerText = `Shard ${i}`;
+    const p = document.createElement('p');
+    p.className = 'heading';
+    const italic = document.createElement('i');
+    italic.innerText = connectionStatusString;
+    p.appendChild(italic);
+    const p2 = document.createElement('p');
+    p2.className = 'heading';
+    p2.innerText = shardLatencyString;
+    const p3 = document.createElement('p');
+    p3.className = 'heading';
+    p3.innerText = `${shardGuildCount.toLocaleString()} servers`;
+
+    // construct the actual div
+    notification.appendChild(h3);
+    notification.appendChild(p);
+    notification.appendChild(p2);
+    notification.appendChild(p3);
+    div.appendChild(notification);
+
+    // append the div to the shard info div
+    shardInfoDiv.appendChild(div);
   }
 
-  // hide the loading dots
+  // hide the loading part
   document.getElementById('loading').style.display = 'none';
   // show the status info
   document.getElementById('content').style.display = null;
-  // stop the dots animation
-  clearInterval(dotsId);
 };
 x();

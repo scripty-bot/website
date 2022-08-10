@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Scripty | Privacy</title>
 
   <link rel="preload" href="/assets/jb_mono/woff2/jb.woff2" as="font" type="font/woff2" crossorigin="">
@@ -19,25 +20,33 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://scripty.org/privacy.html">
 
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>
-<div class="body">
-  <header>
-    <div class="header_title">
-      Scripty
-    </div>
-    <div class="header_links">
-      <a href="index.html" class="dyn_btn">Home</a><span class="btn_bullet">&nbsp;•&nbsp;</span>
-      <a href="invite.html" class="dyn_btn">Invite</a><span class="btn_bullet">&nbsp;•&nbsp;</span>
-      <a href="about.html" class="dyn_btn">About</a>
-    </div>
-  </header>
+<div class="container is-widescreen">
+  <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/"><h1>Scripty</h1></a>
 
-  <h1 class="text-center">Privacy Policy</h1>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="main-navbar">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="main-navbar" class="navbar-menu">
+      <div class="navbar-start">
+        <a href="invite.html" class="navbar-item">Invite</a>
+        <a href="about.html" class="navbar-item">About</a>
+      </div>
+      <div class="navbar-end"></div>
+    </div>
+  </nav>
 
-  <section>
+  <h1>Privacy Policy</h1>
+
+  <section class="section">
     <h2>What data is collected?</h2>
     <p>Scripty only stores the bare minimum required to operate. This includes the following:</p>
     <ul class="hid_list">
@@ -66,7 +75,7 @@
     </ul>
   </section>
 
-  <section>
+  <section class="section">
     <h2>For what purposes is this data stored?</h2>
     <p>This data is stored for various purposes, including:</p>
     <ul>
@@ -75,7 +84,7 @@
     </ul>
   </section>
 
-  <section>
+  <section class="section">
     <h2>How is this data used?</h2>
     <p>Any personally identifiable data is only used to provide core functions of the bot.</p>
     <p>
@@ -85,16 +94,17 @@
     </p>
   </section>
 
-  <section>
+  <section class="section">
     <h2>Who is the data shared with?</h2>
     <p>
       Personally identifiable data is shared with no one except the core developers
-      (currently <code>0/0#9631</code> and <code>valkyrie_pilot#2707</code>).
+      (currently <code>0/0#9631</code> and <code>valkyrie_pilot#2707</code>),
+      and they will only view this information if required.
     </p>
     <p>Anonymous, aggregated stats are shared with everyone who wishes to view them.</p>
   </section>
 
-  <section>
+  <section class="section">
     <h2>Who can I contact with concerns?</h2>
     <p>
       You can contact the core developers via Discord
@@ -105,10 +115,12 @@
     </p>
   </section>
 
-  <section>
+  <section class="section">
     <h2>How can I request deletion of my data?</h2>
     <p>You may contact the core developers via the mediums specified above and request we delete your data.</p>
   </section>
+
+  <p>Last updated: Aug 9, 2022</p>
 
   <footer>
     <hr>

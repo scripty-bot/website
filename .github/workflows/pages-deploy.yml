@@ -15,6 +15,20 @@ jobs:
         with:
           fetch-depth: 0
 
+      # Setup Node.js and NPM
+      - uses: actions/setup-node@v1
+        name: Setup Node.js
+        with:
+          node-version: 10
+
+      # Install build deps
+      - name: Install build deps
+        run: npm i
+
+      # Build site
+      - name: Build site
+        run: npm deploy
+
       # Build sitemap
       - name: Build Sitemap
         uses: cicirello/generate-sitemap@v1
@@ -50,3 +64,4 @@ jobs:
           github_token: ${{ secrets.ACCESS_TOKEN }}
           publish_dir: ./out
           cname: scripty.org
+          exclude_assets: '.github,node_modules,lib,_sass,_javascript'

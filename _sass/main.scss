@@ -1,0 +1,74 @@
+@charset "utf-8";
+// We're using Bulma here as the CSS framework
+
+@import "jb_mono.css";
+$family-sans-serif: "JetBrains Mono", monospace;
+
+html {
+  font-family: "JetBrains Mono", monospace;
+}
+body {
+  margin: 0px;
+  min-height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background-image: linear-gradient(60deg, #000, #111);
+  padding: 16px;
+  text-align: center;
+}
+
+// invert the scheme colors
+$black: #fff;
+$black-bis: #eee;
+$black-ter: #ddd;
+$grey-lighter: #bbb;
+$grey-light: #aaa;
+$grey: #999;
+$grey-dark: #888;
+$grey-darker: #777;
+$white-ter: #222;
+$white-bis: #111;
+$white: #000;
+
+$text: white;
+$modal-background-background-color: rgba(0,0,0,0.33);
+
+.navbar.is-transparent, .table.is-transparent {
+  background: transparent !important;
+}
+.button.is-transparent{
+  background: transparent;
+}
+.button.is-transparent:hover{
+  background: $white-ter;
+}
+a.default-color {
+  color: $grey;
+}
+a.default-color:hover {
+  color: #ccc;
+}
+.table {
+  color: $text !important;
+}
+blockquote {
+  // style the text of blockquotes that way it's italic
+  font-style: italic;
+}
+
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/generic.sass";
+@import "../node_modules/bulma/sass/elements/button.sass";
+@import "../node_modules/bulma/sass/grid/columns.sass";
+@import "../node_modules/bulma/sass/components/navbar.sass";
+@import "../node_modules/bulma/sass/elements/container.sass";
+@import "../node_modules/bulma/sass/layout/section.sass";
+@import "../node_modules/bulma/sass/elements/table.sass";
+@import "../node_modules/bulma/sass/components/dropdown.sass";
+@import "../node_modules/bulma/sass/components/modal.sass";
+@import "../node_modules/bulma/sass/elements/progress.sass";
+@import "../node_modules/bulma/sass/components/level.sass";
+@import "../node_modules/bulma/sass/elements/title.sass";
+@import "../node_modules/bulma/sass/elements/notification.sass";

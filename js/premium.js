@@ -81,7 +81,7 @@ function x() {
     if (!dntActive) subscribeLink.addEventListener("click", function () {
       sa_event("sponsor_tier_clicked_" + tier["p"])
     });
-    subscribeLink.className = "btn";
+    subscribeLink.className = "button is-light";
     subscribeLink.innerHTML = "Subscribe";
     appendChild(subscribeColumn, subscribeLink);
     appendChild(tableRow, subscribeColumn);
