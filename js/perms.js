@@ -1,1 +1,0 @@
-function x(){const e=document.getElementById("perm_sets"),t=document.getElementById("perm_sets_btn");let s=e.style.display,o=t.innerText;function n(){let n="Click here to show them",s="none";e.style.display==="none"&&(s=null,n.replace(/show/i,"hide")),e.style.display=s,t.innerText=n}t.addEventListener("click",n)}x()
