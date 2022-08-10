@@ -21,6 +21,10 @@ jobs:
         with:
           node-version: 16
 
+      # Update NPM
+      - name: Update NPM
+        run: sudo npm install -g npm
+
       # Install build deps
       - name: Install build deps
         run: npm i
