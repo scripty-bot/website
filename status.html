@@ -94,8 +94,13 @@
 
     <section class="section">
       <h2>Calculate your server's shard ID</h2>
-      <input type="number" id="guild_id" placeholder="Server ID" inputmode="numeric">
-      <button id="calculate_shard_id">Calculate</button>
+      <div class="field">
+        <label class="label">Server ID</label>
+        <div class="control">
+          <input type="number" id="guild_id" placeholder="Server ID" inputmode="numeric">
+        </div>
+      </div>
+      <button id="calculate_shard_id" class="button is-success">Calculate</button>
       <div id="shard_id_result"></div>
     </section>
 
