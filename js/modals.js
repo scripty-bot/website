@@ -35,9 +35,10 @@ function x() {
 
   // Add a keyboard event to close all modals
   document.addEventListener('keydown', (event) => {
-    const e = event || window.event;
+    const evnt = event || window.event;
+    const keyCode = evnt.code || event.keyCode;
 
-    if (e.keyCode === 27) { // Escape key
+    if (keyCode === 27) { // Escape key
       closeAllModals();
     }
   });

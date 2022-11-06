@@ -9,13 +9,8 @@ function shardIdButtonClick() {
   // get the guild id from the input field
   const guildId = document.getElementById('guild_id').value;
   // try parsing the guild id as a number, if it fails, show an error and return
-  let guildIdNumber;
-  try {
-    guildIdNumber = parseInt(guildId);
-    if (isNaN(guildIdNumber)) {
-      throw new Error(null);
-    }
-  } catch (e) {
+  let guildIdNumber = parseInt(guildId, 10);
+  if (isNaN(guildIdNumber)) {
     document.getElementById('shard_id_result').innerHTML = 'Invalid guild id';
     return;
   }
@@ -43,7 +38,7 @@ async function x() {
       document.getElementById('offline').style.display = null;
     } else {
       // show the error in the on_error div
-      document.getElementById('error_message').innerHTML = error;
+      document.getElementById('error_message').innerText = e.toString();
       document.getElementById('on_error').style.display = null;
     }
     return;
@@ -147,11 +142,11 @@ async function x() {
     notification.id = `shard_${i}`;
     const h3 = document.createElement('h3');
     h3.innerText = `Shard ${i}`;
-    const p = document.createElement('p');
-    p.className = 'heading';
+    const p1 = document.createElement('p');
+    p1.className = 'heading';
     const italic = document.createElement('i');
     italic.innerText = connectionStatusString;
-    p.appendChild(italic);
+    p1.appendChild(italic);
     const p2 = document.createElement('p');
     p2.className = 'heading';
     p2.innerText = shardLatencyString;
@@ -161,7 +156,7 @@ async function x() {
 
     // construct the actual div
     notification.appendChild(h3);
-    notification.appendChild(p);
+    notification.appendChild(p1);
     notification.appendChild(p2);
     notification.appendChild(p3);
     div.appendChild(notification);
