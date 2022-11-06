@@ -41,10 +41,9 @@ jobs:
           drop-html-extension: true
 
       # Download minifier program and untar it to /tmp
-      # https://github.com/tdewolff/minify/releases/download/v2.11.1/minify_linux_amd64.tar.gz
       - name: Download minifier
         run: |
-          curl -L https://github.com/tdewolff/minify/releases/download/v2.11.1/minify_linux_amd64.tar.gz | tar xz -C /tmp
+          curl -L https://github.com/tdewolff/minify/releases/download/v2.12.4/minify_linux_amd64.tar.gz | tar xz -C /tmp
 
       # # Minify all assets to ./out
       # Remove the ./out directory if it exists
