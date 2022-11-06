@@ -11,13 +11,13 @@ function shardIdButtonClick() {
   // try parsing the guild id as a number, if it fails, show an error and return
   let guildIdNumber = parseInt(guildId, 10);
   if (isNaN(guildIdNumber)) {
-    document.getElementById('shard_id_result').innerHTML = 'Invalid guild id';
+    document.getElementById('shard_id_result').innerText = 'Invalid guild id';
     return;
   }
   // calculate the shard id
   const shardId = calculateShardId(guildIdNumber, shardCountGlobal);
   // show the shard id
-  document.getElementById('shard_id_result').innerHTML = `Guild ${guildIdNumber} is on shard ${shardId}`;
+  document.getElementById('shard_id_result').innerText = `Guild ${guildIdNumber} is on shard ${shardId}`;
 }
 // register the click event listener for the shard id button
 document.getElementById('calculate_shard_id').addEventListener('click', shardIdButtonClick);
@@ -53,10 +53,10 @@ async function x() {
   // get channel count
   const channelCount = json.voice_channel_count;
   // show this data in the status page
-  document.getElementById('shard_count').innerHTML = shardCount.toLocaleString();
-  document.getElementById('guild_count').innerHTML = guildCount.toLocaleString();
-  document.getElementById('user_count').innerHTML = userCount.toLocaleString();
-  document.getElementById('channel_count').innerHTML = channelCount.toLocaleString();
+  document.getElementById('shard_count').innerText = shardCount.toLocaleString();
+  document.getElementById('guild_count').innerText = guildCount.toLocaleString();
+  document.getElementById('user_count').innerText = userCount.toLocaleString();
+  document.getElementById('channel_count').innerText = channelCount.toLocaleString();
 
   const shardInfoDiv = document.getElementById('shard_info');
 
