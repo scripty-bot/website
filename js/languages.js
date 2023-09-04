@@ -1,5 +1,5 @@
 // Fetches languages from the API, and returns them as an array of objects
-// If error, notify user and return empty array
+// If error, notify user and return an empty array
 function fetchLanguagesFromApi() {
   return fetch('https://api.scripty.org/languages').then(response => {
     if (response.ok) {

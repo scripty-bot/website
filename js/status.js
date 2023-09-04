@@ -34,7 +34,7 @@ async function x() {
 
     // check if the error code is bad gateway (502)
     if (e.code === '502') {
-      // the bot's offline
+      // the bot is offline
       document.getElementById('offline').style.display = null;
     } else {
       // show the error in the on_error div
@@ -112,7 +112,7 @@ async function x() {
       default:
         connectionStatusString = 'Unknown';
         break;
-    };
+    }
 
     // map connection status to class names
     // 0 => is-success
@@ -129,7 +129,7 @@ async function x() {
       default:
         connectionStatusClass = 'is-warning';
         break;
-    };
+    }
 
     // format shard latency as milliseconds with three decimal places
     const shardLatencyString = `${(shardLatency / 1000000).toFixed(3)}ms`;
@@ -169,5 +169,5 @@ async function x() {
   document.getElementById('loading').style.display = 'none';
   // show the status info
   document.getElementById('content').style.display = null;
-};
+}
 x();
