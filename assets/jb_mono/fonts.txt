@@ -1,0 +1,4 @@
+Scripty's site uses JetBrains Mono.
+The font itself can be found at https://www.jetbrains.com/lp/mono/
+Subsetting the font was done with Font Squirrel's webfont generator at https://www.fontsquirrel.com/tools/webfont-generator
+Was done to reduce payload size from ~120kB to ~22kB.
