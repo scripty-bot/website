@@ -15,8 +15,11 @@ body {
   left: 0px;
   width: 100%;
   background-image: linear-gradient(60deg, #000, #111);
-  padding: 16px;
   text-align: center;
+}
+
+.container {
+  padding: 16px;
 }
 
 // invert the scheme colors
