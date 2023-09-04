@@ -57,12 +57,21 @@
     and <a href="/privacy.html">Privacy Policy</a>.
   </p>
 
-  <p>
-    <a href="https://dash.scripty.org/oauth/invite"
-       id="invite_btn" data-goatcounter-click="invite-discord.com" class="button is-black">
-      Invite Scripty
-    </a>
-  </p>
+  <form action="https://dash.scripty.org/oauth/invite" method="get" class="box">
+    <div class="block is-clickable">
+      <label class="is-clickable">
+        <input type="checkbox" id="support_server" name="support_server" value="1">
+        Check this box if you'd also like to be added to Scripty's support server.
+      </label>
+    </div>
+
+    <div class="block">
+      <button type="submit"
+         id="invite_btn" data-goatcounter-click="invite-discord.com" class="button is-black">
+        Invite Scripty
+    </button>
+    </div>
+  </form>
 
   <footer>
     <hr>
