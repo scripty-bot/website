@@ -31,7 +31,7 @@
   "bugs": {
     "url": "https://github.com/jgthms/bulma-start/issues"
   },
-  "bundleDependencies": false,
+  "bundleDependencies": [],
   "deprecated": false,
   "description": "Start package for Bulma",
   "devDependencies": {
