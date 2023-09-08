@@ -16,14 +16,14 @@ jobs:
           fetch-depth: 0
 
       # Setup Node.js and NPM
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         name: Setup Node.js
         with:
           node-version: 16
 
       # Update NPM
       - name: Update NPM
-        run: sudo npm install -g npm
+        run: npm install -g npm
 
       # Install build deps
       - name: Install build deps
@@ -39,6 +39,10 @@ jobs:
         with:
           base-url-path: https://scripty.org
           drop-html-extension: true
+
+      # Shrink CSS
+      - name: Shrink CSS
+        run: node minify.js
 
       # Download minifier program and untar it to /tmp
       - name: Download minifier
@@ -67,4 +71,4 @@ jobs:
           github_token: ${{ secrets.ACCESS_TOKEN }}
           publish_dir: ./out
           cname: scripty.org
-          exclude_assets: '.github,node_modules,lib,_sass,_javascript'
+          exclude_assets: '.github,node_modules,lib,_sass,_javascript,minify.js,package.json,package-lock.json,README.md'
