@@ -27,7 +27,7 @@ jobs:
 
       # Build site
       - name: Build site
-        run: npm run deploy
+        run: npm run css-deploy
 
       # Build sitemap
       - name: Build Sitemap
