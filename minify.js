@@ -15,6 +15,7 @@ const purgeCSSConfig = {
   content: ['./**/*.html'],
   css: ['./css/main.css'],
   output: './css/main.min.css',
+  safelist: ['is-active'],
 };
 
 purgeCSS.purge(purgeCSSConfig).then(result => {
