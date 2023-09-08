@@ -19,11 +19,7 @@ jobs:
       - uses: actions/setup-node@v2
         name: Setup Node.js
         with:
-          node-version: 16
-
-      # Update NPM
-      - name: Update NPM
-        run: npm install -g npm
+          node-version: 20
 
       # Install build deps
       - name: Install build deps
